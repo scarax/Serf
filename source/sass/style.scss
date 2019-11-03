@@ -3,3 +3,109 @@
 @import 'libs';
 @import 'mixins';
 @import 'main.scss';
+.header {
+  position: relative;
+  height: 100vh;
+}
+.slider-item {
+  position: relative;
+  height: 100vh;
+  background-image: url(../img/header-slider.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slider-item__info {
+  position: absolute;
+  right: 80px;
+  bottom: 115px;
+  text-align: right;
+  text-transform: uppercase;
+}
+.slider-item__title {
+  margin: 0;
+  margin-bottom: 0.5em;
+  font-size: rem(80);
+  font-weight: 800;
+}
+.slider-item__suptitle,
+.slider-item__desc {
+  margin: 0;
+  margin-bottom: 0.3em;
+}
+.suptitle-left {
+  position: relative;
+  display: inline-block;
+  padding-left: calc(80px + 1em);
+  font-size: rem(22);
+  line-height: 1.45;
+  color: #ffffff;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  opacity: 0.5;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 80px;
+    height: 1px;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+  }
+}
+.slider-item__text {
+  margin: 0;
+  margin-bottom: 0.5em;
+  font-size: rem(40);
+  font-weight: 800;
+}
+.slider-item__link {
+  display: inline-block;
+}
+.arrow {
+  position: absolute;
+  top: 40px;
+  width: 24px;
+  height: 20px;
+  z-index: 50;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  &--prev {
+    right: 125px;
+    background: url(../img/arrow-left.svg) no-repeat center;
+  }
+  &--next {
+    right: 80px;
+    background: url(../img/arrow-right.svg) no-repeat center;
+  }
+}
+.slider-nav {
+  position: absolute;
+  right: 50px;
+  bottom: 35px;
+  max-width: 920px;
+  width: 100%;
+}
+.slider-nav__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 200px;
+  min-height: 35px;
+  padding-top: 0.25em;
+  border-top: 4px solid #ffffff;
+}
+.slick-current .slider-nav__box {
+  border-top-color: $accent;
+}
+.slider-nav__num {
+  font-size: rem(24);
+  line-height: 1.4;
+  font-weight: 800;
+}
+.slider-nav__name {
+  font-weight: 300;
+}

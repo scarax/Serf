@@ -8,11 +8,12 @@ body {
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Fira Sans', 'Arial', sans-serif;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.2;
   font-weight: normal;
   color: $text;
+  background-color: #171919;
   overflow-x: hidden;
 }
 img {
