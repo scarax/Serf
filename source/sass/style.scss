@@ -109,3 +109,106 @@
 .slider-nav__name {
   font-weight: 300;
 }
+.header__aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  min-width: 168px;
+  height: 100vh;
+  border-right: 1px solid rgba(#ffffff, 0.25);
+  color: #ffffff;
+  text-align: center;
+  animation: header-nav 1000ms ease-out 250ms;
+}
+@keyframes header-nav {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.header__logo {
+  display: block;
+  margin-bottom: 5em;
+}
+.header__logo-image {
+  width: 168px;
+  height: 280px;
+}
+.site-list,
+.user-list {
+  display: flex;
+  flex-flow: column;
+}
+.site-list__item,
+.user-list__item {
+  width: 100%;
+}
+.site-list__item a,
+.user-list__item a {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+  font-size: rem(12);
+  letter-spacing: 3px;
+  transition: color 350ms;
+}
+.site-list__item a:hover,
+.site-list__item a:focus {
+  color: $accent;
+}
+.site-list__item img {
+  margin-bottom: em(6);
+  transition: transform 1250ms;
+}
+.user-list__item img {
+  transition: transform 750ms;
+}
+.site-list__item a:hover img,
+.site-list__item a:focus img {
+  transform: rotateY(1turn);
+}
+.user-list__item a:hover img,
+.user-list__item a:focus img {
+  transform: rotate(-1turn);
+}
+.header__date {
+  font-weight: 300;
+  letter-spacing: 1.4px;
+}
+.header__date-day {
+  display: block;
+  font-size: rem(72);
+  font-weight: 800;
+}
+.header__meta {
+  margin-bottom: 2.75em;
+}
+.header__location {
+  position: relative;
+  padding-left: 19px;
+  font-size: rem(12);
+  font-weight: 300;
+  letter-spacing: 1px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 11px;
+    height: 14px;
+    background-image: url(../img/marker.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
