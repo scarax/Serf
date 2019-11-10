@@ -20,6 +20,7 @@
   border-right: 1px solid rgba(#ffffff, 0.25);
   color: #ffffff;
   text-align: center;
+  text-transform: initial;
   animation: header-nav 1000ms ease-out 250ms;
 }
 @keyframes header-nav {
@@ -200,7 +201,6 @@
   right: 80px;
   bottom: 115px;
   text-align: right;
-  text-transform: uppercase;
 }
 .slider-item__title {
   margin: 0;
@@ -213,33 +213,9 @@
   margin: 0;
   margin-bottom: 0.3em;
 }
-.suptitle-left {
-  position: relative;
-  display: inline-block;
-  padding-left: calc(80px + 1em);
-  font-size: rem(22);
-  line-height: 1.45;
-  color: #ffffff;
-  text-align: right;
-  text-transform: uppercase;
-  letter-spacing: 7px;
-  opacity: 0.5;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 80px;
-    height: 1px;
-    transform: translateY(-50%);
-    background-color: #ffffff;
-  }
-}
 .slider-item__text {
   margin: 0;
   margin-bottom: 0.5em;
-  font-size: rem(40);
-  font-weight: 800;
 }
 .slider-item__link {
   display: inline-block;
@@ -288,4 +264,77 @@
 }
 .slider-nav__name {
   font-weight: 300;
+  text-transform: capitalize;
+}
+.surf {
+  padding-top: 10em;
+  padding-bottom: 7.5em;
+  background-image: url(../img/surf-bg.png);
+  background-position: 100% 14em;
+  background-repeat: no-repeat;
+}
+.surf__title {
+  margin: 0;
+  margin-left: 15rem;
+}
+.surf__subtitle {
+  margin-top: 3.75em;
+  margin-right: 5em;
+  text-align: right;
+}
+.surf__head {
+  margin: 0;
+  margin-bottom: 0.35em;
+}
+.surf__text {
+  margin: 0;
+}
+.surf__slider {
+  padding-top: em(110);
+}
+.surf__slider .arrow {
+  top: em(52);
+  opacity: 0.25;
+}
+.surf-slider__box {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  padding: 72px 20px 0 40px;
+  min-height: 750px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(#1c2121, 0.85);
+  background-blend-mode: overlay;
+}
+.slick-slide:nth-child(4n+1) .surf-slider__box {
+  margin-top: 2em;
+}
+.slick-slide:nth-child(4n+3) .surf-slider__box {
+  margin-top: 5.5em;
+}
+.slick-current .surf-slider__box {
+  background-color: rgba(#1c2121, 0.25);
+}
+.surf-slider__title {
+  margin: 0;
+  margin-bottom: auto;
+  max-width: 50%;
+  font-size: rem(40);
+  line-height: 1;
+  font-weight: 800;
+}
+.surf-slider__location {
+  margin: 0;
+  font-size: rem(18);
+  letter-spacing: 8px;
+  transform: rotateZ(-90deg);
+  transform-origin: 0 0;
+}
+.surf-slider__btn {
+  display: none;
+}
+.slick-current .surf-slider__btn {
+  display: block;
 }
