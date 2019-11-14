@@ -289,10 +289,128 @@
 .surf__text {
   margin: 0;
 }
-.surf__slider {
+.slider-map {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  min-height: 635px;
+  margin: 0 auto;
+  background-image: url(../img/world-map.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .slick-list {
+    min-height: inherit;
+  }
+}
+.slider-map__item {
+  position: absolute;
+  &--1 {
+    top: 330px;
+    left: 0;
+  }
+  &--2 {
+    top: 290px;
+    left: 135px;
+  }
+  &--3 {
+    top: 318px;
+    left: 338px;
+  }
+  &--4 {
+    top: 500px;
+    left: 415px;
+  }
+  &--5 {
+    top: 215px;
+    left: 530px;
+  }
+  &--6 {
+    top: 555px;
+    left: 637px;
+  }
+  &--7 {
+    top: 395px;
+    left: 800px;
+  }
+  &--8 {
+    top: 491px;
+    left: 1085px;
+  }
+}
+.slider-map__content {
+  position: absolute;
+  left: -50%;
+  bottom: 15px;
+  display: none;
+  width: 285px;
+  padding: 1.75em 2em;
+  background-color: rgba(#0f1010, 0.7);
+  border-radius: 0.5em;
+}
+.slick-current .slider-map__content {
+  display: block;
+}
+.slider-map__circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $accent;
+}
+.slider-map__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.9em;
+}
+.slider-map__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 0.75em;
+  font-size: rem(18);
+  line-height: 1.45;
+  font-weight: 800;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.3125rem;
+    width: 5rem;
+    height: 1px;
+    background-color: $accent;
+  }
+}
+.slider-map__country {
+  text-transform: capitalize;
+}
+.slider-map__link {
+  display: inline-block;
+}
+.slider-map__condition {
+  display: flex;
+  justify-content: space-between;
+}
+.slider-map__condition-item {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 33%;
+  text-align: center;
+}
+.slider-map__condition-image {
+  margin-bottom: 0.5em;
+}
+.slider-map__condition-num {
+  line-height: 1.44;
+  font-weight: 800;
+}
+.slider-map__condition-name {
+  font-size: rem(10);
+  font-weight: 300;
+}
+.surf-slider {
   padding-top: em(110);
 }
-.surf__slider .arrow {
+.surf-slider .arrow {
   top: em(52);
   opacity: 0.25;
 }
@@ -332,9 +450,9 @@
   transform: rotateZ(-90deg);
   transform-origin: 0 0;
 }
-.surf-slider__btn {
+.surf-slider__link {
   display: none;
 }
-.slick-current .surf-slider__btn {
+.slick-current .surf-slider__link {
   display: block;
 }
