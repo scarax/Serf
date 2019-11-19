@@ -98,6 +98,8 @@ ul[class] {
 .title {
   position: relative;
   display: inline-block;
+  margin: 0;
+  margin-left: 15rem;
   font-size: 5rem;
   font-weight: 800;
   &::after {
@@ -121,28 +123,49 @@ ul[class] {
     user-select: none;
   }
 }
-.headline-left {
+.subtitle-left {
+  margin-left: 8.25em;
+}
+.subtitle-right {
+  margin-right: 5em;
+  text-align: right;
+}
+.headline-left,
+.headline-right {
   position: relative;
   display: inline-block;
-  padding-left: calc(80px + 1em);
+  margin: 0;
+  margin-bottom: 0.35em;
   font-size: rem(22);
   line-height: 1.45;
   color: #ffffff;
-  text-align: right;
   letter-spacing: 7px;
   opacity: 0.5;
   &::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: 0;
     width: 5rem;
     height: 1px;
     transform: translateY(-50%);
     background-color: #ffffff;
   }
 }
+.headline-left {
+  padding-right: calc(5rem + 1em);
+  &::before {
+    right: 0;
+  }
+}
+.headline-right {
+  padding-left: calc(5rem + 1em);
+  text-align: right;
+  &::before {
+    left: 0;
+  }
+}
 .subhead {
+  margin: 0;
   font-size: rem(40);
   font-weight: 800;
   span {
