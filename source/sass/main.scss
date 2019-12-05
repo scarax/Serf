@@ -137,6 +137,7 @@ ul[class] {
   margin: 0;
   margin-bottom: 0.35em;
   font-size: rem(22);
+  font-weight: 400;
   line-height: 1.45;
   color: #ffffff;
   letter-spacing: 7px;
@@ -171,4 +172,57 @@ ul[class] {
   span {
     font-weight: 300;
   }
+}
+.quantity {
+  display: inline-block;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.quantity input {
+  width: 2.75rem;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  text-align: right;
+}
+.quantity input:focus {
+  outline: 0;
+}
+.quantity-nav {
+  position: absolute;
+  right: 0;
+  bottom: -50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 4rem;
+  height: 1.25rem;
+}
+.quantity-button {
+  position: relative;
+  padding: 0 0.5rem;
+  width: 50%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  outline: none;
+}
+.quantity-button--up {
+  background-image: url(../img/plus.svg);
+}
+.quantity-button--down {
+  background-image: url(../img/minus.svg);
 }
