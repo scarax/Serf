@@ -638,6 +638,10 @@
 .shop-slider {
   margin-top: 4.75em;
 }
+.shop-slider .arrow {
+  top: 0;
+  opacity: 0.25;
+}
 .shop-slider__wrapper {
   display: flex;
   justify-content: space-between;
@@ -672,6 +676,80 @@
   display: grid;
   grid-template-columns: auto 1fr;
   width: 60%;
+}
+.shop-slider__board {
+  position: relative;
+}
+.tips {
+  position: absolute;
+  &--1 {
+    top: 200px;
+    left: 170px;
+  }
+  &--2 {
+    top: 300px;
+    left: -6px;
+  }
+  &--3 {
+    top: 610px;
+    left: 53px;
+  }
+}
+.tips__toggle {
+  width: 1.25em;
+  height: 1.25em;
+  padding: 0.25em;
+  border: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+.tips__toggle span {
+  position: relative;
+  display: block;
+}
+.tips__toggle span,
+.tips__toggle span::before {
+  width: 0.75em;
+  height: 2px;
+  background-color: $accent;
+  transition: transform 300ms linear;
+}
+.tips__toggle span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+.tips--hide span {
+  transform: rotate(90deg);
+}
+.tips--hide span::before {
+  transform: rotate(90deg);
+}
+.tips__content {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 0.5em);
+  display: block;
+  width: calc(255px + 6.5rem);
+  padding-left: 6.5rem;
+  font-size: rem(24);
+  font-weight: 800;
+  transform: translateY(-50%);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 5rem;
+    height: 1px;
+    background-color: #fff;
+    opacity: 0.5;
+  }
+}
+.tips--hide .tips__content {
+  display: none;
 }
 .extras-shop {
   align-self: flex-end;
@@ -711,4 +789,27 @@
 .extras-shop__price {
   font-size: rem(18);
   font-weight: 800;
+}
+.footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 10em;
+  padding-bottom: 2em;
+}
+.footer .btn {
+  span {
+    padding: 0.5em;
+    &::after{
+      display: none;
+    }
+  }
+}
+.footer__copyright {
+  margin: 0;
+  margin-top: 1.75rem;
+  font-size: rem(12);
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0.5;
 }
